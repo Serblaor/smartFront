@@ -10,6 +10,7 @@ import "./home.css";
 const Home = () => {
   return (
     <div>
+     console.log("esta la cagada qui?")
       <MyNavbar />
       <Header/>
       <div className="homeContainer">
