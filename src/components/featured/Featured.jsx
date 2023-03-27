@@ -4,7 +4,7 @@ import "./featured.css";
 
 const Featured = () => {
   const { data, loading, error } = useFetch(
-    "/hotels/countByCity?cities=medellin,bogota,cartagena,cali"
+    "https://smart-2imr.onrender.com/api/hotels/countByCity?cities=medellin,bogota,cartagena,cali"
   );
 
   return (
