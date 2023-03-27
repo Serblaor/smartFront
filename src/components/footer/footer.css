@@ -1,0 +1,43 @@
+.footer{
+  width: 100%;
+  max-width: 1024px; /* use max-width instead of width */
+  font-size: 12px;
+}
+
+.fLists{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; /* add this property to wrap the elements on small screens */
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.fList{
+  list-style: none;
+  padding: 0;
+  flex-basis: 33%; /* divide the elements into three columns for medium and larger screens */
+  max-width: 33%;
+}
+
+.fText{
+  text-align: center;
+}
+
+.fListItem{
+  margin-bottom: 10px;
+  color: #003580;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) { /* apply styles for screens smaller than 768px */
+  .fList {
+    flex-basis: 50%; /* divide the elements into two columns */
+    max-width: 50%;
+  }
+}
+@media (max-width: 480px) { /* apply styles for screens smaller than 480px */
+  .fList {
+    flex-basis: 100%; /* display the elements in one column */
+    max-width: 100%;
+  }
+}

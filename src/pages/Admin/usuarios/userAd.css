@@ -1,0 +1,43 @@
+.tableU {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .tableU th,
+  .tableU td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .tableU th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .tableU tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .tableU tr:hover {
+    background-color: #ebebeb;
+  }
+  
+  @media (max-width: 768px) {
+    .tableU {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .tableU th,
+    .tableU td {
+      display: inline-block;
+      border: none;
+      width: auto;
+    }
+    .tableU th {
+      text-align: left;
+    }
+  }
+  

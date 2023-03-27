@@ -1,0 +1,76 @@
+.login {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #003580;
+}
+.animacion{
+  overflow: hidden;
+    white-space: nowrap;
+    font-size: 2.5rem;
+    color: #ffffff;
+    align-items: center;
+    width: 150px;
+    justify-content: center;
+    margin-bottom: 2rem;
+    border-right: 2px solid rgba(255, 255, 255, 0.87);
+    animation: animacionIntro 0.5s steps(1, end),
+    animacionBar 1s step-end infinite;
+  }
+  .login a{
+    color:#ffffff;
+  }
+  .login a:hover{
+    opacity: 0.8;
+    color: #adadad;
+  }
+  .login span{
+    color:#adadad;
+  }
+  
+  @keyframes animacionIntro {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 100px;
+    }
+  }
+  
+  @keyframes animacionBar {
+    0%,
+    100% {
+      border-color:rgb(255, 248, 248);
+    }
+    50% {
+      border-color:  rgba(215, 201, 201, 0.87);
+    }
+  }
+
+.lContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lInput{
+  height: 30px;
+  padding: 10px;
+}
+
+.lButton {
+  border: none;
+  padding: 10px 20px;
+  background-color: #0071c2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.lButton:disabled{
+  background-color: #0071c28c;
+  cursor: not-allowed;
+}

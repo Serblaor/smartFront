@@ -1,0 +1,12 @@
+.principalAdmin{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    
+    padding: 2rem;
+    margin-top: 2rem;
+    width: 80%;
+    margin-left: 1rem;
+}
