@@ -11,7 +11,7 @@ const HotelForm = ({ hotelData, onSubmit, onUpdateSuccess, onClose }) => {
         e.preventDefault();
         try {
             if (hotelData._id) { // Si hay un ID, envía una solicitud PUT
-                await axios.put(`/hotels/${stateHotel._id}`, stateHotel);
+                await axios.put(`https://smart-2imr.onrender.com/api/hotels/${stateHotel._id}`, stateHotel);
                 if (onUpdateSuccess) {
                     onUpdateSuccess();
                 }
