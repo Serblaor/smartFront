@@ -8,7 +8,7 @@ import { Button } from "react-bootstrap";
 
 
 const UserAd = ({ onUpdate, onDelete }) => {
-  const { data: users, loading, error, reFetch } = useFetch("/users");
+  const { data: users, loading, error, reFetch } = useFetch("https://smart-2imr.onrender.com/api/users");
   const [editingUser, setEditingUser] = useState(null);
   const [newUser, setNewUser] = useState({
     username: "",
@@ -45,7 +45,7 @@ const UserAd = ({ onUpdate, onDelete }) => {
     });
   
     if (confirmDelete) {
-      await axios.delete(`/users/${user._id}`);
+      await axios.delete(`https://smart-2imr.onrender.com/api/users/${user._id}`);
       swal("Poof! The user has been deleted!", {
         icon: "success",
       });
@@ -59,7 +59,7 @@ const UserAd = ({ onUpdate, onDelete }) => {
 
   const handleSave = async () => {
     if (editingUser) {   
-      await axios.put(`/users/${editingUser._id}`, editingUser);
+      await axios.put(`https://smart-2imr.onrender.com/api/users/${editingUser._id}`, editingUser);
     } else {
       setNewUser({
         username: "",
