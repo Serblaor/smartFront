@@ -20,7 +20,7 @@ const Hoteles = () => {
   const [newModalOpen, setNewModalOpen] = useState(false);
   const [hotelId, setHotelId] = useState('');
 
-  const { data, loading, error, reFetch } = useFetch("/hotels");
+  const { data, loading, error, reFetch } = useFetch("https://smart-2imr.onrender.com/api/hotels");
 
 
 
@@ -30,7 +30,7 @@ const Hoteles = () => {
     }
     const ids = selectedRows.map((row) => row._id);
     try {
-      await axios.put(`/hotels/${ids.join(",")}`, { enabled: false });
+      await axios.put(`https://smart-2imr.onrender.com/api/hotels/${ids.join(",")}`, { enabled: false });
       reFetch();
 
     } catch (err) {
@@ -63,7 +63,7 @@ const Hoteles = () => {
   
       if (result) {
         try {
-          await axios.delete(`/hotels/${ids.join(",")}`);
+          await axios.delete(`https://smart-2imr.onrender.com/api/hotels/${ids.join(",")}`);
           reFetch();
         } catch (err) {
           console.error(err);
