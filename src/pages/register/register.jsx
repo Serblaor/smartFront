@@ -34,7 +34,7 @@ const handleSubmit = async (e) => {
   setLoading(true);
   setMensaje("");
   try {
-    const response = await fetch("/auth/register", {
+    const response = await fetch("https://smart-2imr.onrender.com/api/auth/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
